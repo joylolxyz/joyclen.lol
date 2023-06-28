@@ -1,165 +1,319 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>joyclen.lol >_<</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="i am the best" />
-    <meta name="twitter:card" content="player cards" />
-    <meta name="theme-color" content="#2b2d31">
-    <meta name="twitter:site" content="https://joyclen.lol" />
-    <meta property="og:title" content="joyclen.lol" />
-    <meta property="og:description" content="the best in the entire world - i only have one discord which is @joyclen " />
-    <meta property="og:url" content="https://joyclen.lol" />
-    <meta
-      property="og:image"
-      content="https://cdn.discordapp.com/attachments/1059885106359181352/1117081761155911761/devilogo.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <meta property="og:locale" content="en" />
-    <link rel="canonical" href="https://joyclen.lol" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1059885106359181352/1117082488733438022/988688837142261791.png" />
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #0c0d0d;
-        overflow: hidden;
-      }
+<html lang="en" theme="White">
+	<!--Biolink CSS credits to fakecrime-->
+            <head>
+	<meta charset="utf-8">
+    <title>joy >_<</title>
+    <meta property="og:title" content="joy ">
+    <meta name="description" content="joy">
+    <meta property="og:description" content="joy">
+    <meta name="twitter:card" content="summary">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2F3136">
+            <script src="/cdn-cgi/apps/head/vWvHkqI6PMiucyf16iiwsHKUQ_I.js"></script><link href="" rel="shortcut icon" type="image/x-icon">
+            <meta name="twitter:card" content="summary">     
+    <link rel="preload" href="https://feds.lol/module/newww/css/app.css" as="style">
+    <link rel="stylesheet" href="https://feds.lol/module/newww/main.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="assets/vendors/animation/animate.css" rel="stylesheet">
+	
+	
 
-      .animated-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        pointer-events: none;
-      }
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		    <link href="assets/vendors/animation/animate.css" rel="stylesheet">
+	
+    <script src="./script.js" data-site="IHGLANPG" defer></script>	
+	
+	
+	
 
-      .animated-background:before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-          45deg,
-          #ff00ff,
-          #00ffff,
-          #00ff00,
-          #ffff00,
-          #ff0000,
-          #ff00ff
-        );
-        background-size: 400% 400%;
-        animation: animated-gradient 10s linear infinite;
-      }
+    </head>
+    
+    <body class="fedslol">
 
-      @keyframes animated-gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
 
-      h1 {
-        font-size: 48px;
-        font-weight: bold;
-        margin: 0;
-        text-align: center;
-        font-family: Satoshi,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-        color: #ffffff;
-      }
+                                  					
 
-      p {
-        font-size: 24px;
-        margin: 0;
-        text-align: center;
-        font-family: Satoshi,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-        color: #ffffff;
-      }
+<script>
 
-      img {
-        width: 400px;
-        height: 400px;
-        margin-bottom: 32px;
-        border-radius: 20px;
-        object-fit: cover;
-      }
+var TxtType = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
 
-      .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 16px;
-      }
+TxtType.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
-      .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 40px;
-        border-radius: 10px;
-        background-color: #1e1f1f;
-        color: #e1e1e1;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: none;
-        font-family: Satoshi,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-        margin: 8px;
-        transition: background-color 0.3s ease;
-      }
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-      .button:hover {
-        background-color: #2e2f2f;
-      }
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
-      .button-icon {
-        margin-right: 8px;
-        color: #ffffff; 
-      }
-    </style>
-  </head>
-  <body>
-    <img
-      src="https://cdn.discordapp.com/attachments/845428888691408906/1115802876325920850/IMG_7366.jpg"
-      alt="joyclen.lol"
-    />
+  var that = this;
+  var delta = 200 - Math.random() * 100;
 
-    <h1>joyclen.lol</h1>
-    <p style="color: #a3a3a3;">
-        <span style="color: white;">i only have <strong>one</strong> discord which is <strong>@joyclen</strong><br>
-    </p>
+  if (this.isDeleting) {
+    delta /= 2;
+  }
 
-    <div class="button-container">
-      <a href="https://last.fm/costliness" class="button">
-        <i class="fab fa-lastfm button-icon" style="color: #ffffff;"></i>
-        last.fm
-      </a>
-      <a href="https://discord.com/users/1030825343357026350" class="button">
-        <i class="fab fa-discord button-icon" style="color: #ffffff;"></i>
-        discord
-      </a>
-      <a href="https://github.com/joylolxyz" class="button">
-        <i class="fab fa-github button-icon" style="color: #ffffff;"></i>
-        github
-      </a>
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  var elements = document.getElementsByClassName("typewrite");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-type");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+  document.body.appendChild(css);
+};
+
+
+</script>
+      
+<style>
+	.max-w-\[1100px\] {
+	
+		width:500px
+	}
+		</style>
+		
+        <main style="">
+
+    <div class="fixed w-full h-full">
+        <video id="backgroundVideo" style="object-fit: fill; height: 100%; width: 100%; filter:brightness(50%)" loop hidden="hidden">
+            <source src="https://cdn.discordapp.com/attachments/1113589478674673764/1123662298419052685/videobg.mp4" type="video/mp4">
+        </video>
     </div>
 
-  </body>
+    <style>
+        .click_anywhere {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <div class="clickanywhere premium_border">
+        <div class="click_body" style="height:100%;width:100%;">
+            <div class="click_anywhere">
+                <h4 style="color:white;font-size:12pt;">[click to enter]</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="biolink" style="display:none;height:100%;width:100%;">
+            <div class="relative w-full h-full px-4 py-16 table">
+                <div class="table-cell align-middle text-center">
+                    
+     
+    <div class="bg-main rounded-md shadow-4xl w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px] mt-14">
+
+ 
+            <div class="p-10">
+
+            
+            
+            <div class="not-last-child:mb-8">
+                <div class="-mt-[85px]">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+                    <img
+    class="w-44 h-44 rounded-full mx-auto shadow-avatar"
+
+    
+	
+                        src="https://cdn.discordapp.com/attachments/898898902093266944/904375428305784893/original.png"
+                
+    
+    title="Image"
+    alt="Image"
+        draggable="false"
+/>                </div>
+            </div>
+
+            <div class="not-last-child:mb-8">
+                <div class="flex justify-center items-center space-x-2">
+                      	
+					                            <h2 class="text-[20px] text-white font-semibold" style="color: #fff; background-image: url('https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif');filter: drop-shadow(8px 8px 10px #f3f1f3);color:#f3f1f3;">joy</h2>
+                            						 					
+													
+												
+						 					
+                    
+													
+												 </div>
+              
+                <p class="text-sm">
+                    <em>@joyclen got banned, add my new acc @joyclen<strong>s</strong></em>
+                </p>
+				<p class="text-sm">
+            </div>
+              
+
+                            <div class="not-last-child:mb-8">
+                    <div class="mx-auto max-w-[750px]">
+                        <p>
+                      									<pre></pre>
+
+						
+
+                        </p>
+                    </div>
+              		
+                </div>
+				<div class="flex justify-center items-center space-x-2">
+					
+																										  
+										<div class="flex justify-center items-center space-x-2" style="
+    border-radius: 10px;
+    box-shadow: 0 0px 30px #0a0a0a;
+    backdrop-filter: blur(55px);
+    padding: 8px;
+    background: #141417;
+	width:500px
+">
+
+						<a href="https://discord.com/users/1057310810440994967" rel="vidbox" title="caption">
+                        	<img src="discord.svg" style="width:35px">
+						</a>
+						<a href="https://t.me/joyclens" rel="vidbox" title="caption">
+                        	<img src="telegram.svg" style="width:35px">
+						</a>
+                        <a href="https://github.com/joylolxyz" rel="vidbox" title="caption">
+                        	<img src="github.svg" style="width:35px">
+						</a>
+					</div>
+						
+                                         				
+                </div>  
+
+        </div>
+   
+    
+</div>
+    
+        <div class="1w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px]">
+		    
+            <div class="!p-0">
+
+            
+            
+            <div
+    class="flex flex-wrap justify-between gap-6"
+>
+					
+                    
+            
+</div>
+
+        </div>
+    </div>
+    
+</div>
+    </div>
+</div>
+    
+
+        </main>
+		
+		
+<script src="/js/page.js?id=2c4f84bac56c0ce1881f"></script>	
+<script>
+
+    function playclip() {
+        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
+            if (document.all) {
+                document.all.sound.src = "song.mp3";
+            }
+        } else {
+            {
+                var audio = document.getElementsByTagName("audio");
+
+                if(audio.length > 0) audio[0].play();
+
+                var video = document.getElementsByTagName("video");
+
+                if(video.length > 0) {
+                    video = video[0];
+                    video.removeAttribute('hidden');
+                    video.play();
+                }
+            }
+        }
+    }
+
+document.querySelector('.fedslol').addEventListener('click', function() {
+  
+  playclip();
+});
+
+$(document).ready(function () {
+	$( document.body ).click(function() {
+	$(".clickanywhere").fadeOut(1000);
+    $(".biolink").fadeIn(1000);
+
+	let play = function(){document.getElementById("audio").play()}
+	
+	
+
+	
+	});
+});
+                       
+var _old = jQuery.Event.prototype.stopPropagation;
+
+jQuery.Event.prototype.stopPropagation = function() {
+    this.target.nodeName !== 'SPAN' && _old.apply( this, arguments );
+};             
+
+</script>
+</body>
 </html>
+
