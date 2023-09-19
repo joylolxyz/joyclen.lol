@@ -1,315 +1,84 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang="en" theme="White">
-            <head>
-	<meta charset="utf-8">
-    <title>joy</title>
-    <meta property="og:title" content="joy ">
-    <meta name="description" content="joy">
-    <meta property="og:description" content="my only discord accounts are @joyclen & @joyclens ">
-    <meta name="twitter:card" content="summary">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#2F3136">
-            <script src="/cdn-cgi/apps/head/vWvHkqI6PMiucyf16iiwsHKUQ_I.js"></script><link href="" rel="shortcut icon" type="image/x-icon">
-            <meta name="twitter:card" content="summary">     
-    <link rel="preload" href="/css/app.css" as="style">
-    <link rel="stylesheet" href="/css/main.css">
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link href="assets/vendors/animation/animate.css" rel="stylesheet">
-	
-	
-
-	
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		    <link href="assets/vendors/animation/animate.css" rel="stylesheet">
-	
-    <script src="./script.js" data-site="IHGLANPG" defer></script>	
-	
-	
-	
-
-    </head>
-    
-    <body class="joyclenlol">
-
-
-                                  					
-
-<script>
-
-var TxtType = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = "";
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === "") {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function () {
-    that.tick();
-  }, delta);
-};
-
-window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
-
-
-</script>
-      
-<style>
-	.max-w-\[1100px\] {
-	
-		width:500px
-	}
-		</style>
-		
-        <main style="">
-
-    <div class="fixed w-full h-full">
-        <video id="backgroundVideo" style="object-fit: fill; height: 100%; width: 100%; filter:brightness(50%)" loop hidden="hidden">
-            <source src="https://cdn.discordapp.com/attachments/1113589478674673764/1124284420761866270/y2mate.is_-_Dave_-_Starlight-iVWsP3IadBk-1080pp-1688120652.mp4" type="video/mp4">
-        </video>
-    </div>
-
+<html>
+<head>
+    <title>joyclen.lol - apology</title>
+    <meta name="robots" content="index,follow"/>
+<meta name="description" content="a premium discord bot"/>
+<meta name="twitter:card" content="player cards"/>
+<meta name="twitter:site" content="https://joyclen.lol"/>
+<meta property="og:title" content="joyclen.lol"/>
+<meta property="og:description" content="my apology, for everything."/>
+<meta property="og:url" content="https://joyclen.lol"/>
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/1039300648342134895/1153583486318411836/6172b48643320a017c40d90622529892.jpg"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="500"/>
+<meta property="og:image:height" content="500"/>
+<meta property="og:locale" content="en"/>
+<meta property="og:site_name" content="joyclen.lol - apology"/>
+<link rel="canonical" href="https://joyclen.lol"/>
     <style>
-        .click_anywhere {
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+            background: linear-gradient(to bottom, #0c0d0d, #0c0d0d, #0c0d0d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Hide any potential overflow */
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
             margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            color: #a3a3a3;
+        }
+
+        img {
+            width: 320px;
+            height: 320px;
+            margin-bottom: 32px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
     </style>
-    <div class="clickanywhere premium_border">
-        <div class="click_body" style="height:100%;width:100%;">
-            <div class="click_anywhere">
-                <h4 style="color:white;font-size:12pt;">[click to enter]</h4>
-            </div>
-        </div>
+</head>
+<body>
+    <div>
+        <h1><strong>apology</strong></h1>
+        <p>as some of you know, me and nolan have been <strong>broken up</strong>. over the past few days, we've been broken up, i've realized my time comes to an <strong>end</strong> on this platform. i realize that i have nothing to do anymore. i did everything for nolan and wanted to stay with him forever, but sadly due to personal issues, that will never happen. i tried apologizing so much to him, but it didn't work, and i'm blocked everywhere. i now realize that i hurt a lot of people with my time alone, and i would like to apologize for it deeply. if i hurt you, i'm sorry, and i hope you can accept my apology. i will be going from everyone now, as nobody needs me now, and i realize i'm going to be an outcast to everyone if i ever meant something.</p>
+        <br>
+        <p>as an apology to nolan, i want to apologize for everything i've done to you. you know what i've done, and it's very bad. i cannot change the past, and i know i can't, but i hope you don't have any emotions off me now i'm gone. i understand you have already tried to get rid of me, and i respect that. but thank you for the chance of dating you.</p>
+        <br>
+        <br>
+        <p>my time here is come to an end, i've realized nobody needs me anymore and i think the only way of getting rid of the guilt and my emotions over mine and nolans breakup is to just disappear, and act like i never existed. i've always self-harmed but this week has been the worst week. im not making this a guilt-tripping apology, but i want you all to know what happens to me. thank you for all the people who listened to me, and wanted to care about me.</p>
+        <br>
+        <p><strong>im sorry, thank you for everything.</strong></p>
+        <br>
+        <a href="https://joyclen.lol/french">french translation</a>
     </div>
-
-
-    <div class="biolink" style="display:none;height:100%;width:100%;">
-            <div class="relative w-full h-full px-4 py-16 table">
-                <div class="table-cell align-middle text-center">
-                    
-     
-    <div class="bg-main rounded-md shadow-4xl w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px] mt-14">
-
- 
-            <div class="p-10">
-
-            
-            
-            <div class="not-last-child:mb-8">
-                <div class="-mt-[85px]">
-				
-				
-				
-				
-				
-				
-				
-				
-				
-                    <img
-    class="w-44 h-44 rounded-full mx-auto shadow-avatar"
-
-    
-	
-                        src="https://cdn.discordapp.com/attachments/898898902093266944/904375428305784893/original.png"
-                
-    
-    title="Image"
-    alt="Image"
-        draggable="false"
-/>                </div>
-            </div>
-
-            <div class="not-last-child:mb-8">
-                <div class="flex justify-center items-center space-x-2">
-                      	
-					                            <h2 class="text-[20px] text-white font-semibold" style="color: #fff; background-image: url('https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif');filter: drop-shadow(8px 8px 10px #f3f1f3);color:#f3f1f3;">joy</h2>
-                            						 					
-													
-												
-						 					
-                    
-													
-												 </div>
-              
-                <p class="text-sm">
-                    <em>im better than you pussy</em>
-                </p>
-				<p class="text-sm">
-            </div>
-              
-
-                            <div class="not-last-child:mb-8">
-                    <div class="mx-auto max-w-[750px]">
-                        <p>
-                      									<pre></pre>
-
-						
-
-                        </p>
-                    </div>
-              		
-                </div>
-				<div class="flex justify-center items-center space-x-2">
-					
-																										  
-										<div class="flex justify-center items-center space-x-2" style="
-    border-radius: 10px;
-    box-shadow: 0 0px 30px #0a0a0a;
-    backdrop-filter: blur(55px);
-    padding: 8px;
-    background: #141417;
-	width:500px
-">
-
-						<a href="https://discord.com/users/1057310810440994967" rel="vidbox" title="kys pussy">
-                        	<img src="discord.svg" style="width:35px">
-						</a>
-						<a href="https://t.me/joyclens" rel="vidbox" title="caption">
-                        	<img src="telegram.svg" style="width:35px">
-						</a>
-					</div>
-						
-                                         				
-                </div>  
-
-        </div>
-   
-    
-</div>
-    
-        <div class="1w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px]">
-		    
-            <div class="!p-0">
-
-            
-            
-            <div
-    class="flex flex-wrap justify-between gap-6"
->
-					
-                    
-            
-</div>
-
-        </div>
-    </div>
-    
-</div>
-    </div>
-</div>
-    
-
-        </main>
-		
-		
-<script src="/js/page.js?id=2c4f84bac56c0ce1881f"></script>	
-<script>
-
-    function playclip() {
-        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
-            if (document.all) {
-                document.all.sound.src = "song.mp3";
-            }
-        } else {
-            {
-                var audio = document.getElementsByTagName("audio");
-
-                if(audio.length > 0) audio[0].play();
-
-                var video = document.getElementsByTagName("video");
-
-                if(video.length > 0) {
-                    video = video[0];
-                    video.removeAttribute('hidden');
-                    video.play();
-                }
-            }
-        }
-    }
-
-document.querySelector('.joyclenlol').addEventListener('click', function() {
-  
-  playclip();
-});
-
-$(document).ready(function () {
-	$( document.body ).click(function() {
-	$(".clickanywhere").fadeOut(1000);
-    $(".biolink").fadeIn(1000);
-
-	let play = function(){document.getElementById("audio").play()}
-	
-	
-
-	
-	});
-});
-                       
-var _old = jQuery.Event.prototype.stopPropagation;
-
-jQuery.Event.prototype.stopPropagation = function() {
-    this.target.nodeName !== 'SPAN' && _old.apply( this, arguments );
-};             
-
-</script>
 </body>
 </html>
-
