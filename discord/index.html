@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>joyclen.lol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="joyclen.lol">
+    <meta property="og:description" content='why executor not injecting?? why saveinstance() broken??'>
+    <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
+    <style>
+        @font-face {
+            font-family: "Cascadia";
+            src: url('/imgs/Cascadia.ttf') format('truetype');
+        }
+
+        * {
+            font-family: Cascadia;
+            font-weight: medium;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -2;
+        }
+
+        .middle-text {
+            color: #bfbfbf;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .middle-text span {
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .full-page-overlay {
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background">
+    <div class="middle-text" onclick="copyToClipboard()">
+       current discord is: <span id="discordName">joyclens</span>
+    </div>
+
+    <div class="full-page-overlay">
+        <img src="/imgs/fake-ascii.png">
+    </div>
+</div>
+
+<script>
+    function copyToClipboard() {
+        var discordName = document.getElementById("discordName").innerText;
+        navigator.clipboard.writeText(discordName)
+            .then(() => {
+                alert("copied to clipboard: " + discordName);
+            })
+            .catch(err => {
+                console.error('failed to copy: ', err);
+            });
+    }
+</script>
+
+</body>
+</html>
