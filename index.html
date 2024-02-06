@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="joyclen.lol">
-    <meta property="og:description" content="why executor not injecting?? why saveinstance() broken??">
+    <meta property="og:description" content='why executor not injecting?? why saveinstance() broken??'>
     <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
     <style>
         @font-face {
             font-family: "Cascadia";
-            src: url('/imgs/Cascadia.ttf') format('truetype');
+            src: url('https://lunebot.wtf/random/Cascadia.ttf') format('truetype');
         }
 
         * {
@@ -33,6 +33,14 @@
             z-index: -2;
         }
 
+        .ascii-image {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5.5);
+            z-index: -2;
+        }
+
         .full-page-overlay {
             position: absolute;
             transition: opacity 1s ease-in-out;
@@ -41,61 +49,30 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-color: black; 
-        }
-        
-        .discord-text {
-            color: white;
-            cursor: pointer;
-        }
-
-        .discord-text:hover {
-            color: #ffffff;
-        }
-
-        .discord-prefix {
-            color: #757575;
-        }
-
-        .text-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1;
-            color: white; 
         }
     </style>
 </head>
 <body>
-</head>
-<body>
+
+<audio id="audio" autoplay loop>
+    <source src="jenvoie.mp3" type="audio/mpeg">
+    your browser does not support the audio element...
+</audio>
 
 <div class="background">
+    <div class="ascii-image" id="image">
+        <img src="espeon.gif">
+    </div>
+
     <div class="full-page-overlay">
+        <img src="https://bludcl.art/assets/fake-ascii.png">
     </div>
 </div>
 
-<input type="text" value="joyclens" id="discordText" style="position: absolute; left: -9999px;">
-
-<button onclick="copyDiscordText()" style="position: absolute; left: -9999px;">copied</button>
-
-<div class="text-container">
-    <p><span class="discord-prefix">my current discord is:</span> <span class="discord-text" onclick="copyDiscordText()">joyclens</span></p>
-</div>
-
 <script>
-    function copyDiscordText() {
-        var discordInput = document.getElementById("discordText");
+    var audio = document.getElementById("audio");
 
-        discordInput.select();
-        discordInput.setSelectionRange(0, 99999); 
-
-        navigator.clipboard.writeText(discordInput.value);
-
-        alert("copied to your clipboard :p");
-    }
+    audio.volume = 0.01;
 </script>
 
 </body>
