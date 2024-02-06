@@ -69,32 +69,39 @@
     </style>
 </head>
 <body>
-</head>
-<body>
 
 <div class="background">
     <div class="full-page-overlay">
     </div>
 </div>
 
-<input type="text" value="joyclens" id="discordText" style="position: absolute; left: -9999px;">
+<input type="text" value="discord://-/users/1057310810440994967" id="discordLink" style="position: absolute; left: -9999px;">
 
-<button onclick="copyDiscordText()" style="position: absolute; left: -9999px;">copied</button>
+<button onclick="copyDiscordLink()" style="position: absolute; left: -9999px;">Copy</button>
 
 <div class="text-container">
-    <p><span class="discord-prefix">my current discord is:</span> <span class="discord-text" onclick="copyDiscordText()">joyclens</span></p>
+    <p><span class="discord-prefix">my current discord is:</span> <span class="discord-text" onclick="openDiscordProfile()">joyclens</span></p>
 </div>
 
 <script>
-    function copyDiscordText() {
-        var discordInput = document.getElementById("discordText");
+    function copyDiscordLink() {
+        var discordLinkInput = document.getElementById("discordLink");
 
-        discordInput.select();
-        discordInput.setSelectionRange(0, 99999); 
+        discordLinkInput.select();
+        discordLinkInput.setSelectionRange(0, 99999); 
 
-        navigator.clipboard.writeText(discordInput.value);
+        document.execCommand("copy");
 
-        alert("copied to your clipboard :p");
+        alert("Copied to clipboard");
+
+        setTimeout(function() {
+            openDiscordProfile();
+        }, 3000); 
+    }
+
+    function openDiscordProfile() {
+        var discordLink = document.getElementById("discordLink").value;
+        window.location.href = discordLink;
     }
 </script>
 
