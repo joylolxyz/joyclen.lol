@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="joyclen.lol">
-    <meta property="og:description" content='why executor not injecting?? why saveinstance() broken??'>
+    <meta property="og:description" content="why executor not injecting?? why saveinstance() broken??">
     <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
     <style>
         @font-face {
             font-family: "Cascadia";
-            src: url('/imgs/Cascadia.ttf') format('truetype');
+            src: url('/imgs/fake-ascii.pngCascadia.ttf') format('truetype');
         }
 
         * {
@@ -30,23 +30,7 @@
             height: 100vh;
             width: 100vw;
             background-color: #050505;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             z-index: -2;
-        }
-
-        .middle-text {
-            color: #bfbfbf;
-            font-size: 24px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .middle-text span {
-            color: white;
-            text-decoration: underline;
-            cursor: pointer;
         }
 
         .full-page-overlay {
@@ -58,30 +42,57 @@
             height: 100%;
             z-index: -1;
         }
+        
+        .discord-text {
+            color: white;
+            cursor: pointer;
+        }
+
+        .discord-text:hover {
+            color: #ffffff;
+        }
+
+        .discord-prefix {
+            color: #757575;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            color: white; 
+        }
     </style>
 </head>
 <body>
 
 <div class="background">
-    <div class="middle-text" onclick="copyToClipboard()">
-       current discord is: <span id="discordName">joyclens</span>
-    </div>
-
     <div class="full-page-overlay">
         <img src="/imgs/fake-ascii.png">
     </div>
 </div>
 
+<input type="text" value="joyclens" id="discordText" style="position: absolute; left: -9999px;">
+
+<button onclick="copyDiscordText()" style="position: absolute; left: -9999px;">copied</button>
+
+<div class="text-container">
+    <p><span class="discord-prefix">my current discord is:</span> <span class="discord-text" onclick="copyDiscordText()">joyclens</span></p>
+</div>
+
 <script>
-    function copyToClipboard() {
-        var discordName = document.getElementById("discordName").innerText;
-        navigator.clipboard.writeText(discordName)
-            .then(() => {
-                alert("copied to clipboard: " + discordName);
-            })
-            .catch(err => {
-                console.error('failed to copy: ', err);
-            });
+    function copyDiscordText() {
+        var discordInput = document.getElementById("discordText");
+
+        discordInput.select();
+        discordInput.setSelectionRange(0, 99999); 
+
+        navigator.clipboard.writeText(discordInput.value);
+
+        alert("copied to your clipboard :p");
     }
 </script>
 
