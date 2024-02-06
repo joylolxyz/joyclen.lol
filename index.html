@@ -1,91 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>joyclen.lol</title>
-    <meta name="robots" content="index,follow"/>
-    <meta name="description" content="joyclen.lol"/>
-    <meta name="twitter:card" content="player cards"/>
-    <meta name="twitter:site" content="https://joyclen.lol"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content="https://joyclen.lol"/>
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1039300648342134895/1153583486318411836/6172b48643320a017c40d90622529892.jpg"/>
-    <meta property="og:image:type" content="image/png"/>
-    <meta property="og:image:width" content="500"/>
-    <meta property="og:image:height" content="500"/>
-    <meta property="og:locale" content="en"/>
-    <link rel="canonical" href="https://joyclen.lol"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="joyclen.lol">
+    <meta property="og:description" content='LA QUOIII ?'>
+    <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #0c0d0d, #0c0d0d, #0c0d0d);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+        @font-face {
+            font-family: "Cascadia";
+            src: url('/imgs/Cascadia.ttf') format('truetype');
+        }
+
+        * {
+            font-family: Cascadia;
+            font-weight: medium;
+        }
+
+        body, html {
             margin: 0;
+            padding: 0;
+            height: 100%;
             overflow: hidden;
         }
 
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin: 0;
-            text-align: center;
-            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            color: #ffffff;
-        }
-
-        /* Style normal text in grey */
-        p {
-            font-size: 24px;
-            margin: 0;
-            text-align: center;
-            font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            color: #a3a3a3;
-        }
-
-        /* Style hyperlinks in white */
-        a {
-            color: #ffffff;
-            text-decoration: none; /* Remove underlines from hyperlinks */
-        }
-
-        img {
-            width: 320px;
-            height: 320px;
-            margin-bottom: 32px;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-    </style>
-</head>
-<head>
-    <style>
-        /* Center the image horizontally and vertically */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .background {
+            position: relative;
             height: 100vh;
+            width: 100vw;
+            background-color: #050505;
+            z-index: -2;
+        }
+
+        .ascii-image {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5.5);
+            z-index: -2;
+        }
+
+        .full-page-overlay {
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>my only discord is <a href="https://discord.com/users/1057310810440994967">@joyclens</a></h1>
-        <p>i no longer go by "joyclen", please make sure you include the <bold>s</bold></p>
+
+<audio id="audio" autoplay loop>
+    <source src="/imgs/jenvoie.mp3" type="audio/mpeg">
+    your browser does not support the audio element...
+</audio>
+
+<div class="background">
+    <div class="ascii-image" id="image">
+        <img src="/imgs/espeon.gif">
     </div>
+
+    <div class="full-page-overlay">
+        <img src="/imgs/fake-ascii.png">
+    </div>
+</div>
+
+<script>
+    var audio = document.getElementById("audio");
+
+    audio.volume = 0.01;
+</script>
+
 </body>
 </html>
