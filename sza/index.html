@@ -37,6 +37,7 @@
             background-color: #000000;
             color: #000000;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: color 0.1s ease-in-out; 
         }
 
         .quote-text {
@@ -58,7 +59,7 @@
 
     <script>
         const quotes = [
-            "Kill that urge to be chosen . CHOOSE URSELF . ",
+        "Kill that urge to be chosen . CHOOSE URSELF . ",
             "I miss me imma come back lol .",
             "Everyday is an opportunity to fix some shit u messed up . Mess ups are a moment, quitting is forever . Be kind to urself ",
             "Talking less being more .",
@@ -135,6 +136,7 @@
         window.onload = displayRandomQuote;
 
         var audio = document.getElementById("audio");
+        var quoteContainer = document.querySelector(".quote-container");
 
         audio.volume = 0.01;
 
@@ -145,6 +147,20 @@
         window.addEventListener('beforeunload', function() {
             localStorage.setItem('audioTime', audio.currentTime);
         });
+
+        function flashTextWithBeat() {
+            var volume = audio.volume;
+
+            if (volume > 0.5) {
+                quoteContainer.style.color = "#ffffff"; 
+            } else {
+                quoteContainer.style.color = "#757575"
+            }
+
+            requestAnimationFrame(flashTextWithBeat);
+        }
+
+        flashTextWithBeat();
     </script>
 </body>
 </html>
