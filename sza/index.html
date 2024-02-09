@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="joyclen.lol">
-    <meta property="og:description" content="like doves in the wind">
+    <meta property="og:description" content="like doves in the wind.">
     <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
     <style>
         @font-face {
@@ -50,6 +50,11 @@
     <div class="quote-container">
         <div class="quote-text" id="quote"></div>
     </div>
+
+    <audio id="audio" autoplay loop>
+        <source src="/sza/doves.mp3" type="audio/mpeg">
+        your browser does not support the audio element...
+    </audio>
 
     <script>
         const quotes = [
@@ -128,6 +133,18 @@
         }
 
         window.onload = displayRandomQuote;
+
+        var audio = document.getElementById("audio");
+
+        audio.volume = 0.01;
+
+        if(localStorage.getItem('audioTime')) {
+            audio.currentTime = parseFloat(localStorage.getItem('audioTime'));
+        }
+
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('audioTime', audio.currentTime);
+        });
     </script>
 </body>
 </html>
