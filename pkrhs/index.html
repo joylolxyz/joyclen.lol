@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>pkrhs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="pkrhs">
+    <meta property="og:description" content='🇻🇳 🇨🇳'>
+    <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
+    <style>
+        @font-face {
+            font-family: "Cascadia";
+            src: url('/imgs/Cascadia.ttf') format('truetype');
+        }
+
+        * {
+            font-family: Cascadia;
+            font-weight: medium;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #050505;
+            z-index: -2;
+        }
+
+        .ascii-image {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5.5);
+            z-index: -2;
+        }
+
+        .full-page-overlay {
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<audio id="audio" autoplay loop>
+    <source src="/imgs/cheerywine.mp3" type="audio/mpeg">
+    your browser does not support the audio element...
+</audio>
+
+<div class="background">
+    <div class="ascii-image" id="image">
+        <img src="/imgs/gengar.gif">
+    </div>
+
+    <div class="full-page-overlay">
+        <img src="/imgs/fake-ascii.png">
+    </div>
+</div>
+
+<script>
+    var audio = document.getElementById("audio");
+
+    audio.volume = 0.01;
+</script>
+
+</body>
+</html>
