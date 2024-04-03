@@ -1,108 +1,89 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charSet="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>wrath</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="votre bot discord incontournable pour une gestion et un engagement de communauté fluides" />
-    <meta name="twitter:card" content="player cards" />
-    <meta name="twitter:site" content="https://wrath.best" />
-    <meta property="og:title" content="wrath" />
-    <meta content="#2b2d31" data-react-helmet="true" name="theme-color">
-    <meta property="og:description" content="votre bot discord incontournable pour une gestion et un engagement de communauté fluides" />
-    <meta property="og:url" content="https://wrath.best" />
-    <meta property="og:image" content="https://wrath.best/img/wrath.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <meta property="og:locale" content="en" />
-    <link rel="shortcut icon" href="https://wrath.best/img/wrath.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap">
-    <link rel="alternate" hreflang="en" href="https://wrath.best" />
-
+    <title>joyclen.lol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="joyclen.lol">
+    <meta property="og:description" content='why executor not injecting?? why saveinstance() broken??'>
+    <meta property="og:image" context="https://cdn.discordapp.com/attachments/900783507251552317/1075400755244191795/standard_2.gif?ex=65e86880&is=65d5f380&hm=014ac138d1f75234a375ca0ac5a9d9a4b9fe86dc9cbbcf33bf2750a4a826fb15&">
+    <meta name="theme-color" data-react-helmet="true" content="#2B2D31">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #050505;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        @font-face {
+            font-family: "Cascadia";
+            src: url('/imgs/Cascadia.ttf') format('truetype');
+        }
+
+        * {
+            font-family: Cascadia;
+            font-weight: medium;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             overflow: hidden;
         }
 
-        .container {
-            text-align: center;
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #050505;
+            z-index: -2;
         }
 
-        h1 {
-            color: #ffffff;
+        .ascii-image {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5.5);
+            z-index: -2;
+            transition: opacity 1s ease-in-out;
         }
 
-        h2 {
-            color: #8d8d8d;
-            font-size: 20px;
-            font-weight: 100;
-            margin: 0 auto; 
-            max-width: 100%; 
-            word-wrap: break-word;
-        }
-
-        h3 {
-            color: #8d8d8d;
-            font-size: 10px; 
-            margin-top: 5px; 
-            font-weight: 1
-        }
-
-        .buttons-container {
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 10px 10px;
-            width: 150px;
-            border-radius: 3px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            margin: 0 10px; 
-        }
-
-        .commands {
-            background-color: #111111;
-            color: #ffffff;
-        }
-
-        .invite {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .commands:hover {
-            background-color: #333333;
-        }
-
-        .invite:hover {
-            background-color: #bdbdbd;
+        .full-page-overlay {
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     </style>
 </head>
-
-
 <body>
-    <div class="container">
-        <h1>wrath</h1>
-        <h2>votre bot discord incontournable pour une gestion et un engagement de communauté fluides</h2>
-        <h3>et je fume une e-vape qui a le goût du période sang </h3>
-        <div class="buttons-container">
-            <button class="commands">commandes</button>
-            <button class="invite">inviter</button>
-        </div>
-    </div>
-</body>
 
+<audio id="audio" autoplay loop>
+    <source src="/imgs/jenvoie.mp3" type="audio/mpeg">
+    your browser does not support the audio element...
+</audio>
+
+<div class="background">
+    <div class="ascii-image" id="image">
+        <img src="/imgs/espeon.gif">
+    </div>
+
+    <div class="full-page-overlay">
+        <img src="/imgs/fake-ascii.png">
+    </div>
+</div>
+
+<script>
+    var audio = document.getElementById("audio");
+    var image = document.getElementById("image");
+    var overlay = document.querySelector(".full-page-overlay");
+
+    audio.volume = 0.01;
+
+    // After 5 seconds, fade out image and fade in text
+    setTimeout(function() {
+        image.style.opacity = 0;
+        overlay.style.opacity = 1;
+    }, 5000);
+</script>
+
+</body>
 </html>
